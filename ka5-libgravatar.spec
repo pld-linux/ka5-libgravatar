@@ -1,14 +1,14 @@
-%define		kdeappsver	18.12.0
+%define		kdeappsver	18.12.1
 %define		qtver		5.9.0
 %define		kaname		libgravatar
 Summary:	Gravatar library
 Name:		ka5-%{kaname}
-Version:	18.12.0
+Version:	18.12.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	e0eddf44a92771595af31b429da09e30
+# Source0-md5:	f08d77c6c48a029cbbb0b49d650bfea2
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= 5.11.1
@@ -17,7 +17,7 @@ BuildRequires:	Qt5Test-devel
 BuildRequires:	Qt5Widgets-devel
 BuildRequires:	cmake >= 2.8.12
 BuildRequires:	gettext-devel
-BuildRequires:	ka5-pimcommon-devel >= 18.12.0
+BuildRequires:	ka5-pimcommon-devel >= %{kdeappsver}
 BuildRequires:	kf5-extra-cmake-modules >= 5.51.0
 BuildRequires:	kf5-kconfig-devel >= 5.51.0
 BuildRequires:	kf5-ki18n-devel >= 5.51.0
