@@ -1,15 +1,15 @@
-%define		kdeappsver	19.04.1
+%define		kdeappsver	20.12.3
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		libgravatar
 Summary:	Gravatar library
 Name:		ka5-%{kaname}
-Version:	19.04.1
+Version:	20.12.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
-Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	f5d0426850b912096380898b99ed567b
+Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	1095ee6aeab9867fa5fa764ca1669c0d
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= 5.11.1
@@ -74,10 +74,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-/etc/xdg/libgravatar.categories
-/etc/xdg/libgravatar.renamecategories
 %attr(755,root,root) %ghost %{_libdir}/libKF5Gravatar.so.5
 %attr(755,root,root) %{_libdir}/libKF5Gravatar.so.5.*.*
+%{_datadir}/qlogging-categories5/libgravatar.categories
+%{_datadir}/qlogging-categories5/libgravatar.renamecategories
 
 %files devel
 %defattr(644,root,root,755)
